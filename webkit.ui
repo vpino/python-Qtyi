@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>559</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+
+background-color: #FFFFFF;
+margin: 0;
+font-family: sans-serif;
+color: inherit;
+font: inherit;
+margin: 0;
+
+}
+
+QPushButton{
+
+border: none;
+border-radius: 2px;
+outline: 0;
+padding: 0 2rem;
+text-transform: uppercase;
+vertical-align: middle;
+text-decoration: none;
+color: #fff;
+background-color: #26a69a;
+text-align: center;
+
+}
+
+QPushButton:hover{
+
+background-color: #2bbbad;
+margin: 0;
+margin-left: 3rem;
+
+}
+
+QLabel{
+
+color: #9e9e9e;
+position: absolute;
+top: 0.8rem;
+left: 0.75rem;
+
+}
+
+QLabel:hover{
+
+color: #26a69a;
+
+}
+
+QLineEdit{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+outline: none;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QLineEdit:hover{
+
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+
+QSpinBox{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QSpinBox:hover{
+
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+
+QRadioButton:hover{
+
+background: #26a69a;
+color: #f2f2f2;
+padding: 5px 15px;
+
+}
+
+QComboBox{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+width: 20px;
+height: 20px;
+outline: none;
+padding: 15px;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QComboBox:hover{
+
+padding: 5px 15px;
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="url"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="btn_back">
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QWebView" name="navegador"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>559</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

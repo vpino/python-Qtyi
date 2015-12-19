@@ -3,6 +3,8 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QPushButton, QLabel
+from PyQt5 import uic
+
 
 #Clase para crear un cuadro de dialogo
 class Dialogo(QDialog):
@@ -21,6 +23,10 @@ class Dialogo(QDialog):
 
 		#Le creamos una etiqueta
 		self.etiqueta = QLabel(self)
+
+		#Cargamos el form ya modificado
+		uic.loadUi("stylesheet.ui", self)
+
 
 	#Hacemos la clase que va a ser la ventana principal
 class Ventana(QMainWindow):

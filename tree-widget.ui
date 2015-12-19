@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>645</width>
+    <height>569</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+
+background-color: #FFFFFF;
+margin: 0;
+font-family: sans-serif;
+color: inherit;
+font: inherit;
+margin: 0;
+
+}
+
+QPushButton{
+
+border: none;
+border-radius: 2px;
+outline: 0;
+padding: 0 2rem;
+text-transform: uppercase;
+vertical-align: middle;
+text-decoration: none;
+color: #fff;
+background-color: #26a69a;
+text-align: center;
+
+}
+
+QPushButton:hover{
+
+background-color: #2bbbad;
+margin: 0;
+margin-left: 3rem;
+
+}
+
+QLabel{
+
+color: #9e9e9e;
+position: absolute;
+top: 0.8rem;
+left: 0.75rem;
+
+}
+
+QLabel:hover{
+
+color: #26a69a;
+
+}
+
+QLineEdit{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+width: 20px;
+height: 20px;
+outline: none;
+padding: 15px;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QLineEdit:hover{
+
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+
+QSpinBox{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QSpinBox:hover{
+
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+
+QRadioButton:hover{
+
+background: #26a69a;
+color: #f2f2f2;
+padding: 5px 15px;
+
+}
+
+QComboBox{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+width: 20px;
+height: 20px;
+outline: none;
+padding: 15px;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QComboBox:hover{
+
+padding: 5px 15px;
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="2" rowspan="2">
+    <widget class="QPushButton" name="boton">
+     <property name="text">
+      <string>Buscar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QLineEdit" name="ruta">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QTreeWidget" name="directorio">
+     <column>
+      <property name="text">
+       <string>Nombre</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string> Fecha de Modificación</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tipo</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tamaño</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Buscar DIrectorio:</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
