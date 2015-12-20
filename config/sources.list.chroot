@@ -1,0 +1,3 @@
+deb http://multimedia.canaima.softwarelibre.gob.ve/ jessie main non-free
+deb http://200.11.148.219/canaima chimanta usuarios
+deb http://200.11.148.219/linuxmint betsy main upstream import

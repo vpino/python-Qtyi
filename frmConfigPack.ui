@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>701</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Canaima Semilla</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../usr/share/icons/canaima-iconos/places/22/novell-button.png</normaloff>
+    <disabledoff>../../../../usr/share/icons/canaima-iconos/places/22/novell-button.png</disabledoff>../../../../usr/share/icons/canaima-iconos/places/22/novell-button.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+
+background-color: #FFFFFF;
+margin: 0;
+font-family: sans-serif;
+color: inherit;
+font: inherit;
+margin: 0;
+
+}
+
+QPushButton{
+
+border: none;
+border-radius: 2px;
+outline: 0;
+padding: 0 2rem;
+text-transform: uppercase;
+vertical-align: middle;
+text-decoration: none;
+color: #fff;
+background-color: #26a69a;
+text-align: center;
+
+}
+
+QPushButton:hover{
+
+background-color: #2bbbad;
+margin: 0;
+margin-left: 3rem;
+
+}
+
+QLabel{
+
+font-size: 14px;
+font-weight: bold;
+color: #9e9e9e;
+position: absolute;
+top: 0.8rem;
+left: 0.75rem;
+
+}
+
+QLabel:hover{
+
+color: #000;
+
+}
+
+QLabel#titulo{
+
+font-size: 18px;
+
+
+}
+
+QLineEdit{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+width: 20px;
+height: 20px;
+outline: none;
+padding: 15px;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QLineEdit:hover{
+
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+
+QSpinBox{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QSpinBox:hover{
+
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+
+QRadioButton:hover{
+
+background: #26a69a;
+color: #f2f2f2;
+padding: 5px 15px;
+
+}
+
+QComboBox{
+
+font-family: &quot;Roboto&quot;;
+color: #000;
+width: 20px;
+height: 20px;
+outline: none;
+padding: 15px;
+background: #fff;
+border: none;
+border-bottom: 2px solid #9e9e9e;
+
+}
+
+QComboBox:hover{
+
+padding: 5px 15px;
+outline: none;
+border-bottom: 2px solid #26a69a; 
+
+}
+
+QListWidget{
+
+border-top: 2px solid #26a69a; 
+
+}
+
+QListWidget:hover{
+
+border: 2px solid #26a69a; 
+
+}
+</string>
+  </property>
+  <widget class="QPushButton" name="btnSig">
+   <property name="geometry">
+    <rect>
+     <x>373</x>
+     <y>660</y>
+     <width>111</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Siguiente</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCancel">
+   <property name="geometry">
+    <rect>
+     <x>213</x>
+     <y>660</y>
+     <width>111</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbArqui">
+   <property name="geometry">
+    <rect>
+     <x>23</x>
+     <y>250</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Seleccione una arquitectura</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>cinnamon-amd64</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>cinnamon-i386</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>cinnamon-amd64-educativa</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>mate-amd64</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>mate-i386</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>mate-i586-educativa</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>100</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titulo">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>150</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 24px;
+
+color: #26a69a;
+</string>
+   </property>
+   <property name="text">
+    <string>Canaima Semilla</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>33</x>
+     <y>300</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Lista de Paquetes:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAdd">
+   <property name="geometry">
+    <rect>
+     <x>293</x>
+     <y>380</y>
+     <width>90</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Añadir</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRemo">
+   <property name="geometry">
+    <rect>
+     <x>293</x>
+     <y>450</y>
+     <width>90</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Quitar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAddNew">
+   <property name="geometry">
+    <rect>
+     <x>433</x>
+     <y>550</y>
+     <width>181</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar nuevo paquete</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>600</y>
+     <width>701</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>691</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../Escritorio/Screenshot.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>200</y>
+     <width>221</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Escritorio y Arquitecturas:</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listIni">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listFin">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>340</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>403</x>
+     <y>300</y>
+     <width>211</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Lista de paquetes finales:</string>
+   </property>
+  </widget>
+  <zorder>btnSig</zorder>
+  <zorder>btnCancel</zorder>
+  <zorder>cmbArqui</zorder>
+  <zorder>label_4</zorder>
+  <zorder>splitter</zorder>
+  <zorder>titulo</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_5</zorder>
+  <zorder>btnAdd</zorder>
+  <zorder>btnRemo</zorder>
+  <zorder>btnAddNew</zorder>
+  <zorder>line</zorder>
+  <zorder>label</zorder>
+  <zorder>label_6</zorder>
+  <zorder>listIni</zorder>
+  <zorder>listFin</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

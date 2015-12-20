@@ -1,0 +1,59 @@
+Package: nautilus
+Pin: version *
+Pin-Priority: -1
+
+Package: leafpad
+Pin: version *
+Pin-Priority: -1
+
+Package: blender
+Pin: version *
+Pin-Priority: -1
+
+Package: gimp
+Pin: version *
+Pin-Priority: -1
+
+Package: inkscape
+Pin: version *
+Pin-Priority: -1
+
+Package: rhinote
+Pin: version *
+Pin-Priority: -1
+
+Package: gnote
+Pin: version *
+Pin-Priority: -1
+
+Package: bluefish
+Pin: version *
+Pin-Priority: -1
+
+Package: rhythmbox
+Pin: version *
+Pin-Priority: -1
+
+Package: simple-scan
+Pin: version *
+Pin-Priority: -1
+
+Package: gnome-user-guide
+Pin: version *
+Pin-Priority: -1
+
+Package: evolution
+Pin: version *
+Pin-Priority: -1
+
+Package: gnome-session
+Pin: version *
+Pin-Priority: -1
+
+Package: xserver-xorg-video-intel
+Pin: release a=jessie-backports
+Pin-Priority: 500
+
+Package: *
+Pin: origin multimedia.canaima.softwarelibre.gob.ve
+Pin-Priority: 400
