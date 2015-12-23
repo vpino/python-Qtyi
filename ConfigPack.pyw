@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import sys
+import sys, requests
+
 from PyQt5.QtWidgets import QApplication, QDialog, QComboBox, QListWidget, QMessageBox, QInputDialog
 from PyQt5 import uic
 
@@ -16,7 +17,13 @@ class ConfigPack(QDialog):
         uic.loadUi("frmConfigPack.ui", self)
 
         #Cargamos la lista de paquetes de la arquitectura seleccionada en el combo box
+        self.cmbEscri.activated.connect(self.getListaPackages)
+
+        #Cargamos la lista de paquetes de la arquitectura seleccion
         self.cmbArqui.activated.connect(self.getListaPackages)
+
+        #Cargamos la lista de paquetes de la arquitectura seleccion
+        self.cmbDist.activated.connect(self.getListaPackages)
 
         #Cuando le den click al boton añadir llamamos al metodo setListEnd
         self.btnAdd.clicked.connect(self.setListEnd)
@@ -34,27 +41,56 @@ class ConfigPack(QDialog):
     #Metodo que llena la lista de paquete seleccionada en el cmbox
     def getListaPackages(self):
 
+        #Definimos un diccionario con los escritorios
+        escritorios = { '1': "cinnamon", '2': "mate"}
+
+        #Definimos un diccionario con las arquitectura
+        arquitectura = { '1': "amd64", '2': "i386", '3': "i586"}
+
         #Definimos un diccionario con las distribuciones
-        arqui = { '1': "cinnamon", '2': "cinnamon", '3': "cinnamon-edu", '4': "mate", '5': "mate", '6': "mate-edu"}
+        distribuciones = { '1': "", '2': "edu"}
 
-         #Guardamops en una variable el item seleccionado del cmbox
-        item = self.cmbArqui.currentIndex()
+        #Guardamops en una variable el escritorio seleccionado
+        escri = self.cmbEscri.currentIndex()
 
-        try:
+        #Guardamops en una variable la arquitectura seleccionada
+        arqui = self.cmbArqui.currentIndex()
 
-            distro = arqui[str(item)]
+        #Guardamops en una variable la distro seleccionada
+        distro = self.cmbDist.currentIndex()
 
-             #Abrimos el archivo de la aquitectura que hallan seleccionado
-            infile = open('config/canaima-' + distro + '.list.chroot', 'r')
+        if escri != 0 & arqui != 0 & distro != 0:
 
-            # Y hacemos un for para leer linea por linea y agregarlo al listWidget
-            for line in infile:
-                self.listIni.addItem(line)
-            # Cerramos el fichero.
-            infile.close()
+            try:
 
-        except:
-            QMessageBox.warning(self, "Canaima Semilla", "Debe Seleccionar una arquitectura", QMessageBox.Discard)
+                #Limpiamos la lista
+                self.listIni.clear()
+
+                #Obtenemos la lista de los paquetes genericos de la api generada
+                r = requests.get('http://127.0.0.1:8000/api/0.1/paquetes-generic/?format=json')
+
+                a = r.json()['objects'][0]
+
+                print a
+
+                ######### Manera vieja ############
+                #distro = arqui[str(item)]
+
+                 #Abrimos el archivo de la aquitectura que hallan seleccionado
+                #infile = open('config/canaima-' + distro + '.list.chroot', 'r')
+
+                # Y hacemos un for para leer linea por linea y agregarlo al listWidget
+                #for line in infile:
+                    #self.listIni.addItem(line)
+                # Cerramos el fichero.
+                #infile.close()
+                ######### Manera vieja ############
+
+            except:
+
+                #Limpiamos la lista
+                self.listIni.clear()
+                QMessageBox.warning(self, "Canaima Semilla", "Debe Seleccionar una arquitectura", QMessageBox.Discard)
 
     #Metodo para agregar un paquete a la lista final
     def setListEnd(self):

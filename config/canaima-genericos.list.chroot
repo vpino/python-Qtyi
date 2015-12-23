@@ -3,7 +3,6 @@ canaima-base
 canaima-iconos-institucional
 canaima-themes
 canaima-info
-canaima-mate-desktop
 canaima-bienvenido
 canaima-ayuda
 canaima-oficina
@@ -28,4 +27,3 @@ libpam-smbpass
 iceowl-extension
 cheese
 tomboy
-

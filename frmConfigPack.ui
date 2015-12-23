@@ -184,48 +184,31 @@ border: 2px solid #26a69a;
     <string>Cancelar</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="cmbArqui">
+  <widget class="QComboBox" name="cmbEscri">
    <property name="geometry">
     <rect>
-     <x>23</x>
-     <y>250</y>
-     <width>231</width>
+     <x>30</x>
+     <y>240</y>
+     <width>151</width>
      <height>21</height>
     </rect>
    </property>
+   <property name="currentText">
+    <string>Select escritorio</string>
+   </property>
    <item>
     <property name="text">
-     <string>Seleccione una arquitectura</string>
+     <string>Select escritorio</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>cinnamon-amd64</string>
+     <string>cinnamon</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>cinnamon-i386</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>cinnamon-amd64-educativa</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>mate-amd64</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>mate-i386</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>mate-i586-educativa</string>
+     <string>mate</string>
     </property>
    </item>
   </widget>
@@ -246,7 +229,7 @@ border: 2px solid #26a69a;
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>150</y>
+     <y>120</y>
      <width>221</width>
      <height>31</height>
     </rect>
@@ -332,7 +315,7 @@ color: #26a69a;
      <x>0</x>
      <y>0</y>
      <width>691</width>
-     <height>131</height>
+     <height>101</height>
     </rect>
    </property>
    <property name="text">
@@ -346,13 +329,13 @@ color: #26a69a;
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>200</y>
-     <width>221</width>
+     <y>190</y>
+     <width>91</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Escritorio y Arquitecturas:</string>
+    <string>Escritorio:</string>
    </property>
   </widget>
   <widget class="QListWidget" name="listIni">
@@ -388,13 +371,93 @@ color: #26a69a;
     <string>Lista de paquetes finales:</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>190</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Arquitectura:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbArqui">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>240</y>
+     <width>171</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Select arquitectura</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>amd64</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>i386</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>i586</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>190</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Distribución</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbDist">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>240</y>
+     <width>171</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Select DIstribución</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Institucional</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Educativa</string>
+    </property>
+   </item>
+  </widget>
+  <zorder>label_2</zorder>
   <zorder>btnSig</zorder>
   <zorder>btnCancel</zorder>
-  <zorder>cmbArqui</zorder>
+  <zorder>cmbEscri</zorder>
   <zorder>label_4</zorder>
-  <zorder>splitter</zorder>
   <zorder>titulo</zorder>
-  <zorder>label_5</zorder>
   <zorder>label_5</zorder>
   <zorder>btnAdd</zorder>
   <zorder>btnRemo</zorder>
@@ -404,6 +467,10 @@ color: #26a69a;
   <zorder>label_6</zorder>
   <zorder>listIni</zorder>
   <zorder>listFin</zorder>
+  <zorder>label_7</zorder>
+  <zorder>cmbArqui</zorder>
+  <zorder>label_8</zorder>
+  <zorder>cmbDist</zorder>
  </widget>
  <resources/>
  <connections/>
